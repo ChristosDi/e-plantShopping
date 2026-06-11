@@ -4,7 +4,7 @@ function CartItem({ image, name, cost, quantity, onClickMinus, onClickPlus, onCl
     return(
         <div className="cart-item">
             <img
-                src={image}
+                src={`${import.meta.env.BASE_URL}${image}`}
                 alt ={`A ${name} plant.`}
             />
             <div className="cart-item-details">

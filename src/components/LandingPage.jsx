@@ -18,7 +18,7 @@ function LandingPage(){
             loop 
             muted 
             playsInline>
-            <source src="/videos/nursery-background.mp4" type="video/mp4" />
+            <source src={`${import.meta.env.BASE_URL}videos/nursery-background.mp4`} type="video/mp4" />
             </video>
             <div className="left-side">
             <div className="main-title">

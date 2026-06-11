@@ -9,7 +9,7 @@ function ProductList(){
     const cartItems = useSelector(state => state.cart.items);
 
     useEffect(()=>{
-        fetch("/plants.json")
+        fetch(`${import.meta.env.BASE_URL}plants.json`)
             .then(response => response.json())
             .then(data => setPlantList(data));
     },[]);
