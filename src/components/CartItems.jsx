@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import CartItem from "./CartItem";
-import { addItem, removeItem, decrementQuantity } from "../redux/CartSlice";
+import { removeItem, updateQuantity } from "../redux/CartSlice";
 
 function CartItems({onShowPlants}){
     const items = useSelector(state=>state.cart.items);
@@ -20,8 +20,8 @@ function CartItems({onShowPlants}){
                             name={item.name}
                             cost={item.cost}
                             quantity={item.quantity}
-                            onClickMinus={()=>{dispatch(decrementQuantity(item))}}
-                            onClickPlus={()=>{dispatch(addItem(item))}}
+                            onClickMinus={()=>{dispatch(updateQuantity({ name: item.name, quantity: item.quantity - 1 }))}}
+                            onClickPlus={()=>{dispatch(updateQuantity({ name: item.name, quantity: item.quantity + 1 }))}}
                             onClickDelete={()=>{dispatch(removeItem(item))}}
                         />
                 )})}
