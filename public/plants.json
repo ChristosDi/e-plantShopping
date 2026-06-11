@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Fiddle Leaf Fig",
+    "image": "/plants/fiddleLeafFig.png",
+    "description": "Popular indoor tree with large glossy violin-shaped leaves. Loves bright, indirect light.",
+    "cost": 50,
+    "category": "Tropical Plants"
+  },
+  {
+    "name": "Bird of Paradise",
+    "image": "/plants/birdOfParadise.png",
+    "description": "Bold tropical statement plant with large paddle leaves that brings a jungle feel to any room.",
+    "cost": 150,
+    "category": "Tropical Plants"
+  },
+  {
+    "name": "Kentia Palm",
+    "image": "/plants/kentiaPalm.png",
+    "description": "Elegant indoor palm with graceful arching fronds. Tolerant of lower light and easy to care for.",
+    "cost": 190,
+    "category": "Tropical Plants"
+  },
+  {
+    "name": "Dragon Scale Alocasia",
+    "image": "/plants/dragonScaleAlocasia.png",
+    "description": "Rare alocasia prized for its deeply textured, dragon-scale patterned foliage.",
+    "cost": 65,
+    "category": "Tropical Plants"
+  },
+  {
+    "name": "Bambino Fiddle Leaf Fig",
+    "image": "/plants/fiddleLeafFig2.png",
+    "description": "Compact dwarf fiddle leaf fig with the same striking leaves in a smaller, table-top form.",
+    "cost": 38,
+    "category": "Tropical Plants"
+  },
+  {
+    "name": "Sentry Palm",
+    "image": "/plants/kentiaPalm2.png",
+    "description": "Lush relative of the kentia palm with fuller, slightly curlier fronds for a tropical centrepiece.",
+    "cost": 175,
+    "category": "Tropical Plants"
+  },
+  {
+    "name": "Blue Star Fern",
+    "image": "/plants/blueStarFern.png",
+    "description": "Soft blue-green fern with unusual lobed fronds. Perfect for shady, humid corners.",
+    "cost": 35,
+    "category": "Ferns & Foliage"
+  },
+  {
+    "name": "Calathea Orbifolia",
+    "image": "/plants/calatheaOrbifolia.png",
+    "description": "Prayer plant with large rounded leaves striped in silver and green. Loves a humid spot.",
+    "cost": 75,
+    "category": "Ferns & Foliage"
+  },
+  {
+    "name": "Monstera Deliciosa",
+    "image": "/plants/monsteraDeliciosa.png",
+    "description": "The classic Swiss Cheese Plant with iconic split leaves. Fast growing and full of character.",
+    "cost": 45,
+    "category": "Ferns & Foliage"
+  },
+  {
+    "name": "Monstera Adansonii",
+    "image": "/plants/monsteraAdansonii.png",
+    "description": "Trailing Swiss Cheese Vine with delicate holey leaves. Looks beautiful climbing a moss pole.",
+    "cost": 40,
+    "category": "Ferns & Foliage"
+  },
+  {
+    "name": "Variegated Monstera",
+    "image": "/plants/variegatedMonstera.png",
+    "description": "Highly sought-after Monstera with stunning cream and green variegated leaves.",
+    "cost": 180,
+    "category": "Ferns & Foliage"
+  },
+  {
+    "name": "Monstera Laniata",
+    "image": "/plants/monsteraAdansonii2.png",
+    "description": "Glossy wide-leaf form of the Swiss Cheese Vine with dramatic fenestrations as it matures.",
+    "cost": 48,
+    "category": "Ferns & Foliage"
+  },
+  {
+    "name": "Blue Columnar Cactus",
+    "image": "/plants/blueColumnarCactus.png",
+    "description": "Striking blue-green columnar cactus that thrives in bright light and needs very little water.",
+    "cost": 42,
+    "category": "Cacti & Easy-Care"
+  },
+  {
+    "name": "Chilean Spiral Cactus",
+    "image": "/plants/spiralCactus.png",
+    "description": "Unusual slow-growing columnar cactus with a natural spiralling form. A real collector's piece.",
+    "cost": 68,
+    "category": "Cacti & Easy-Care"
+  },
+  {
+    "name": "Snake Plant",
+    "image": "/plants/snakePlant.png",
+    "description": "Hardy upright succulent with tall variegated leaves. Almost impossible to kill and great for clean air.",
+    "cost": 22,
+    "category": "Cacti & Easy-Care"
+  },
+  {
+    "name": "Chinese Money Plant",
+    "image": "/plants/chineseMoneyPlant.png",
+    "description": "Charming pilea with round coin-like leaves. Said to bring good fortune and easy to propagate.",
+    "cost": 35,
+    "category": "Cacti & Easy-Care"
+  },
+  {
+    "name": "Golden Pothos",
+    "image": "/plants/goldenPothos.png",
+    "description": "Easy trailing vine with heart-shaped golden-marbled leaves. Ideal for shelves and hanging pots.",
+    "cost": 25,
+    "category": "Cacti & Easy-Care"
+  },
+  {
+    "name": "Streptocarpus Pretty Turtle",
+    "image": "/plants/prettyTurtle.png",
+    "description": "Compact plant with textured turtle-shell foliage and pretty seasonal blooms.",
+    "cost": 28,
+    "category": "Cacti & Easy-Care"
+  }
+]

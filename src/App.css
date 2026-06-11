@@ -1,0 +1,453 @@
+/*welcome Page*/
+
+.app {
+    position: relative;
+}
+
+.landing_page {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 0 60px;
+    gap: 80px;
+    color: white;
+    
+}
+
+.layout_page {
+    display: flex ;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #f4f7f4;
+}
+
+.navBar{
+    background: rgba(67, 118, 51, 0.8);
+    color: white;
+}
+
+.navBar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.brand-name {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.brand h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: normal;
+    font-style: italic;
+    color: white;
+}
+
+
+
+.logo {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.cart-icon {
+    width: 50px;
+    height: auto;
+    position: relative;
+    left: -10px;
+}
+
+.nav-title h3 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: normal;
+    color: white;
+    position: relative;
+    left: -90px;
+}
+
+.nav-title h3, .cart-icon{
+    cursor: pointer;
+}
+
+.cart-total-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    gap: 20px;
+}
+.cart-total-container strong{
+    font-size: 22px;
+}
+.cart-total-container button {
+    width: 240px;
+    padding: 14px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+/*---Product list grid---*/
+.product-grid {
+    display: grid;
+    /* fits as many cards per row as the width allows, each at least 260px */
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+    padding: 40px 60px;
+}
+
+/*---Product card---*/
+.product-cart {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-cart:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.product-cart img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.product-cart h2 {
+    margin: 16px 16px 8px;
+    font-size: 20px;
+    color: #2e4a23;
+}
+
+.product-cart p {
+    margin: 0 16px 16px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #555;
+    /* push the price to the bottom so all cards line up */
+    flex-grow: 1;
+}
+
+.product-cart h4 {
+    margin: 0 16px 16px;
+    font-size: 18px;
+    color: #4caf50;
+}
+
+.product-button {
+    margin: 0 16px 16px;
+    padding: 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.product-button:hover {
+    background-color: #43a047;
+}
+
+/* disabled once the plant is in the cart */
+.product-button:disabled {
+    background-color: #9bbf9c;
+    cursor: default;
+}
+
+/*---Category sections---*/
+.category-section {
+    margin-bottom: 24px;
+}
+
+.category-title {
+    font-size: 28px;
+    color: #2e4a23;
+    margin: 0;
+    padding: 24px 60px 8px;
+    border-bottom: 2px solid #dbe6db;
+}
+
+.loading {
+    text-align: center;
+    font-size: 22px;
+    padding: 60px;
+    color: #2e4a23;
+}
+
+/*---Cart count badge on the navbar---*/
+.cart-link {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -6px;
+    right: 2px;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 6px;
+    background: #e53935;
+    color: white;
+    border-radius: 11px;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-cart {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+    margin: 16px 0;
+}
+
+/*---Cart items list---*/
+.cart-items-content-area {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin: 24px auto 32px;
+    max-width: 640px;
+}
+
+/* one cart row: image on the left, details stacked on the right */
+.cart-item {
+    display: flex;
+    gap: 20px;
+    background: white;
+    border: 1px solid #e6ece6;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    text-align: left;
+    transition: box-shadow 0.2s ease;
+}
+
+.cart-item:hover {
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.cart-item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 18px 16px 0;
+    flex: 1;
+}
+
+.cart-item-details h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #233d1b;
+}
+
+.cart-item-details h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #8a948a;
+}
+
+/* the  -  1  +  row */
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 2px 0;
+}
+
+.cart-item-quantity button {
+    width: 30px;
+    height: 30px;
+    font-size: 17px;
+    color: #2e4a23;
+    background: #f1f5f1;
+    border: 1px solid #d7e0d7;
+    border-radius: 8px;
+    cursor: pointer;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease;
+}
+
+.cart-item-quantity button:hover {
+    background: #e2eae2;
+}
+
+.cart-item-quantity span {
+    min-width: 30px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #233d1b;
+}
+
+.cart-item-details p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #4caf50;
+}
+
+/* Delete button — small + red */
+.cart-item-details > button:last-child {
+    align-self: flex-start;
+    margin-top: 6px;
+    padding: 6px 14px;
+    background-color: #e53935;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.cart-item-details > button:last-child:hover {
+    background-color: #c62828;
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.app::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: -1;
+}
+
+/*---left-side---*/
+.left-side {
+    width: 35%;
+    text-align: center ;
+    position: relative;
+    left: -90px;
+}
+
+.main-title h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.welcome-text {
+    padding-left: 40px;
+}
+
+.title-line {
+    background-color: rgb(24, 180, 24);
+    width: 50px;
+    height: 3px;
+    margin: 20px 140px 0;
+}
+
+.left-subtitle {
+    margin-top: 24px;
+    margin-bottom: 38px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.get-started-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 14px 32px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+.get-started-btn:hover {
+    background-color: #43a047;
+}
+
+/*---right-side---*/
+.right-side {
+    width: 65%;
+}
+
+/*paragraph at Welcome Page*/
+.paragraph-text {
+    max-width: 900px;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.paragraph-text p {
+    margin: 0;
+}
+
+.paragraph-text-welcomeLine {
+    display: block;
+    text-align: center;
+    padding-left: 0;
+    margin-bottom: 36px;
+    font-weight: 600;
+}
+
+/*text soft flow to blend with the page*/
+.main-title h1,
+.left-subtitle,
+.paragraph-text {
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.35), 
+    0 0 14px rgba(255, 255, 255, 0.18), 
+    0 2px 6px rgba(0, 0, 0, 0.75);
+}
