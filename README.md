@@ -4,7 +4,7 @@ A responsive e-commerce single-page application for an online plant shop, built 
 
 ## Live Demo
 
-(Add your GitHub Pages link here once deployed.)
+https://christosdi.github.io/e-plantShopping/
 
 ## What This Project Demonstrates
 
