@@ -2,6 +2,7 @@ import express from "express";
 import { MongoClient } from "mongodb";
 
 const app = express();
+app.use("/images", express.static("images"));
 const PORT = process.env.PORT?? 3000;
 
 const client = new MongoClient(process.env.MONGODB_URI);
