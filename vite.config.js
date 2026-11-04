@@ -5,4 +5,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/e-plantShopping/',
   plugins: [react()],
+  server: {
+    proxy: {
+      '/api': 'http://localhost:3000',
+      '/images': 'http://localhost:3000',
+    },
+  },
 })
