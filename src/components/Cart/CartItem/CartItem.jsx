@@ -4,7 +4,7 @@ function CartItem({ item, onIncrement, onDecrement, onRemove }){
     return(
         <div className="cart-item">
             <img
-                src={`${import.meta.env.BASE_URL}${item.image}`}
+                src={`/images/${item.image}`}
                 alt={`A ${item.name} plant.`}
             />
             <div className="cart-item-details">

@@ -7,14 +7,28 @@ import CategorySection from "../CategorySection/CategorySection";
 
 function ProductList(){
     const [plantList, setPlantList] = useState([]);
+    const [error, setError] = useState(null);
     const [showCart, setShowCart] = useState(false);
     const dispatch = useDispatch();
     const cartItems = useSelector(state => state.cart.items);
 
     useEffect(()=>{
-        fetch(`${import.meta.env.BASE_URL}plants.json`)
-            .then(response => response.json())
-            .then(data => setPlantList(data));
+        fetch("/api/plants", { signal: AbortSignal.timeout(10000) })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Request failed: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => setPlantList(data))
+            .catch(err => {
+                console.error(err);
+                setError(
+                    err.name === "TimeoutError"
+                        ? "The plants are taking too long to load. Please try again later."
+                        : "Couldn't load the plants. Please try again later."
+                );
+            });
     },[]);
 
     // unique categories, kept in the order they first appear in the data
@@ -36,6 +50,8 @@ function ProductList(){
             <div className="content-area">
                 {showCart ? (
                     <CartItems onContinueShopping={() => setShowCart(false)} />
+                ) : error ? (
+                    <p className="loading">{error}</p>
                 ) : plantList.length === 0 ? (
                     <p className="loading">Loading...</p>
                 ) : (

@@ -2,7 +2,7 @@ function ProductCard({ plant, inCart, onAddToCart }){
     return(
         <div className="product-cart">
             <img
-                src={`${import.meta.env.BASE_URL}${plant.image}`}
+                src={`/images/${plant.image}`}
                 alt={`A ${plant.name} plant`}
             />
             <h2>{plant.name}</h2>
